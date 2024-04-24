@@ -102,3 +102,28 @@ INSERT INTO schools (`name`,`founder`,`class_10`,`class_11`,`class_12`) VALUES
 ,('Rīgas 31. vidusskola','Rīgas valstspilsētas pašvaldība',23,19,14)
 ,('Rīgas Kultūru vidusskola','Rīgas valstspilsētas pašvaldība',112,91,91)
 ,('Rīgas Valsts 2. ģimnāzija','Rīgas valstspilsētas pašvaldība',175,171,152);
+
+
+
+SELECT * FROM schools;
+
+SELECT * FROM schools
+where founder = 'Rīgas valstspilsētas pašvaldība';
+
+SELECT COUNT(founder)
+FROM schools
+WHERE founder = 'Rīgas valstspilsētas pašvaldība';
+
+SELECT DISTINCT founder FROM schools;
+
+SELECT * FROM schools
+ORDER BY class_12 DESC
+Limit 5;
+
+SELECT * FROM schools
+ORDER BY class_10
+Limit 5;
+
+SELECT class_10 + class_11 + class_12 AS sum_of_columns 
+ORDER BY sum_of_columns
+Limit 10;
